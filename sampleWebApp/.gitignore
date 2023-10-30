@@ -9,8 +9,7 @@ bin/
 target/
 .settings/
 
-.metadata 
+.metadata
 .classpath
 /.springBeans
-/target
 /target
