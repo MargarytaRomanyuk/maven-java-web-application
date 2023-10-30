@@ -51,7 +51,7 @@ pipeline {
     }
     post {
         failure {
-            // Ви можете додати код тут, якщо хочете зробити щось специфічне після невдачі пайплайну.
+            echo "Pipeline failed for branch ${env.BRANCH_NAME}"
         }
     }
 }
