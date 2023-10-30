@@ -21,7 +21,7 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 
 # Set the port your application is listening on
-EXPOSE 8080
+EXPOSE 808000
 
 # Run the application
 CMD ["java", "-jar", "app.jar"]
