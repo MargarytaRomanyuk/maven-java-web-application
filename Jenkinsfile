@@ -44,8 +44,8 @@ pipeline {
 
         stage('Lint Dockerfiles') {
             steps {
-                // За умови, що у вас є інструмент лінтингу Dockerfile, наприклад, hadolint.
-                sh 'docker run --rm -i hadolint/hadolint:v2.8.0 < ./Dockerfile'
+                sh 'docker run --rm -i hadolint/hadolint:v2.8.0 --no-color < Dockerfile1'
+                echo 'Hadolint linting completed!'
             }
         }
     }
