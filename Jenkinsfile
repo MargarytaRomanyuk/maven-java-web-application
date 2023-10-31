@@ -44,7 +44,8 @@ pipeline {
 
         stage('Lint Dockerfiles') {
             steps {
-                sh 'docker run --rm -i hadolint/hadolint:v2.8.0 hadolint --no-color /home/cloud_user/jenkins/workspace/multibranch_feature/Dockerfile'
+                sh 'ls -ls'
+                sh 'docker run --rm -i hadolint/hadolint:v2.8.0 hadolint --no-color ./Dockerfile'
                 echo 'Hadolint linting completed!'
             }
         }
