@@ -45,7 +45,7 @@ pipeline {
         stage('Lint Dockerfiles') {
             steps {
                 sh 'ls -ls'
-                sh 'docker run --rm -i hadolint/hadolint:v2.8.0 ./Dockerfile'
+                sh 'docker run --rm -i hadolint/hadolint:v2.8.0  < ./Dockerfile'
                 echo 'Hadolint linting completed!'
             }
         }
