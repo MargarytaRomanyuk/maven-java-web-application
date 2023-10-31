@@ -44,7 +44,7 @@ pipeline {
 
         stage('Lint Dockerfiles') {
             steps {
-                sh 'docker run --rm -i hadolint/hadolint:v2.8.0 hadolint --no-color < Dockerfile'
+                sh 'docker run --rm -i hadolint/hadolint:v2.8.0 hadolint --no-color < ./Dockerfile'
                 echo 'Hadolint linting completed!'
             }
         }
