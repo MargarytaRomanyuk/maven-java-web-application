@@ -46,7 +46,6 @@ pipeline {
             steps {
                 sh 'ls -ls'
                 sh 'docker run --rm -i hadolint/hadolint:v2.8.0 < ./Dockerfile | sed "s/\x1b\[[0-9;]*m//g"'
-'
                 echo 'Hadolint linting completed!'
             }
         }
